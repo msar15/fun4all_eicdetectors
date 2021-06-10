@@ -110,6 +110,7 @@ int PHG4ForwardHcalSubsystem::process_event(PHCompositeNode* topNode)
 {
   // pass top node to stepping action so that it gets
   // relevant nodes needed internally
+  std::cout << "new event" << std::endl;
   if (m_SteppingAction)
   {
     m_SteppingAction->SetInterfacePointers(topNode);

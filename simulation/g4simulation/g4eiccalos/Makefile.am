@@ -26,7 +26,8 @@ pkginclude_HEADERS = \
   PHG4CrystalCalorimeterSubsystem.h \
   PHG4ForwardCalCellReco.h \
   PHG4ForwardEcalSubsystem.h \
-  PHG4ForwardHcalSubsystem.h
+  PHG4ForwardHcalSubsystem.h \
+  PHG4PSDHcalSubsystem.h
 
 libg4eiccalos_la_SOURCES = \
   PHG4BackwardHcalDetector.cc \
@@ -49,6 +50,10 @@ libg4eiccalos_la_SOURCES = \
   PHG4ForwardHcalDisplayAction.cc \
   PHG4ForwardHcalSteppingAction.cc \
   PHG4ForwardHcalSubsystem.cc \
+  PHG4PSDHcalDetector.cc \
+  PHG4PSDHcalDisplayAction.cc \
+  PHG4PSDHcalSteppingAction.cc \
+  PHG4PSDHcalSubsystem.cc \
   PHG4ForwardCalCellReco.cc \
   PHG4FPbScDetector.cc \
   PHG4FPbScSteppingAction.cc \

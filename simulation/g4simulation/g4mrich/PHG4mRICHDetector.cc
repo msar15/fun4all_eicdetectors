@@ -1077,11 +1077,18 @@ void PHG4mRICHDetector::build_mRICH_wall_eside_proj(G4LogicalVolume* logicWorld)
     // std::stringstream key_moduleID;
     // key_moduleID << "mRICH_wall_eside_" << i_mRICH << "_moduleID";
     // int module_id = params->get_int_param(key_moduleID.str());
-
+	   
+    if(i_mRICH<12) scale = 1.065;
+    else if(i_mRICH>=12 && i_mRICH<24) scale = 1.067;
+    else if(i_mRICH>=24 && i_mRICH<44) scale = 1.071;
+    else if(i_mRICH>=44 && i_mRICH<48) scale = 1.076;
+    else scale = 1.078;
+    /*
     if(i_mRICH<8) scale = 1.064;
     else if(i_mRICH>=8 && i_mRICH<24) scale = 1.068;
     else if(i_mRICH>=24 && i_mRICH<48) scale = 1.081;
     else scale = 1.085;
+    */
     // get position
     std::stringstream key_position_x;
     key_position_x << "mRICH_wall_eside_proj_" << i_mRICH << "_position_x";
